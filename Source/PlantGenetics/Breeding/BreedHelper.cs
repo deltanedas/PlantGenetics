@@ -22,9 +22,12 @@ public static class BreedHelper
     public static GetNameSuggestionFromCloneDataDelegate GetNameSuggestionFromCloneDataGeneral = GetNameSuggestionFromCloneDataV3;
     public static string GetNameSuggestionFromCloneDataV2(CloneData cloneData, List<CloneData> allClones)
     {
-        Dictionary<string, CloneData> clonesDict = allClones
-            .Where(x => x.defName != null)
-            .ToDictionary(x => x.defName, x => x);
+        Dictionary<string, CloneData> clonesDict = new();
+        foreach (CloneData data in allClones)
+        {
+            if (data.defName != null)
+                clonesDict[data.defName] = data;
+        }
 
         Dictionary<string, int> traits = [];
         ThingDef thingDef = null;
