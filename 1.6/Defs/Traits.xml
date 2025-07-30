@@ -57,7 +57,13 @@
         <commonality>0.01</commonality>
         <statmultiplier>1.3</statmultiplier>
         <associatedPlantProperty>fertilityMin</associatedPlantProperty>
-    </PlantGenetics.TraitDef>    
+    </PlantGenetics.TraitDef>
+    <PlantGenetics.TraitDef>
+        <defName>Restless</defName>
+        <label>restless</label>
+        <commonality>0.005</commonality>
+        <special>true</special>
+    </PlantGenetics.TraitDef>
 </Defs>
 <!--
 
